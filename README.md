@@ -5,7 +5,7 @@
 ## Features
 * Persona 5 Inspired UI
 * Interactive Carousel & Paginatio
-* Single Page Action Navigation
+* Single Page Application Navigation
 * Responsive 16:9 Stage
 
 ## Installation
