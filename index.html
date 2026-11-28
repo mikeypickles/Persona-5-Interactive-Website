@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persona 5 Style Menu - Complete 5 Menus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Kanit:ital,wght@0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="p5-viewport">
+
+    <!-- ==========================================
+         หน้า 1: เมนูหลัก (MAIN MENU)
+         ========================================== -->
+    <main id="main-menu" class="p5-stage p5-menu-stage active">
+      <nav class="p5-nav" aria-label="Main Menu">
+        
+        <!-- ปุ่มที่ 1: INTRO -->
+        <button type="button" class="p5-btn btn-intro" onclick="openIntroScreen()">
+          <span class="char box rot-r1">I</span>
+          <span class="char rot-l2">N</span>
+          <span class="char rot-r1">T</span>
+          <span class="char rot-l1">R</span>
+          <span class="char box rot-l2">O</span>
+        </button>
+
+        <!-- ปุ่มที่ 2: REVIEW -->
+        <button type="button" class="p5-btn btn-review" onclick="openReviewScreen()">
+          <span class="char rot-l2">R</span>
+          <span class="char rot-r1">E</span>
+          <span class="char rot-l1">V</span>
+          <span class="char box rot-r2">I</span>
+          <span class="char rot-l1">E</span>
+          <span class="char rot-r1">W</span>
+        </button>
+
+        <!-- ปุ่มที่ 3: POSTS -->
+        <button type="button" class="p5-btn btn-posts" onclick="openPostsScreen()">
+          <span class="char rot-l1">P</span>
+          <span class="char rot-r2">O</span>
+          <span class="char rot-l1">S</span>
+          <span class="char rot-r1">T</span>
+          <span class="char box rot-r2">S</span>
+        </button>
+
+        <!-- ปุ่มที่ 4: CONFIDANT -->
+        <button type="button" class="p5-btn btn-confidant" onclick="openConfidantScreen()">
+          <span class="char char-lg rot-l1">C</span>
+          <span class="char box rot-l2">O</span>
+          <span class="char rot-r1">N</span>
+          <span class="char rot-l1">F</span>
+          <span class="char box rot-r2">I</span>
+          <span class="char rot-l1">D</span>
+          <span class="char rot-r1">A</span>
+          <span class="char rot-l1">N</span>
+          <span class="char rot-r2">T</span>
+        </button>
+
+        <!-- ปุ่มที่ 5: ABOUT -->
+        <button type="button" class="p5-btn btn-about" onclick="openAboutScreen()">
+          <span class="char rot-l2">A</span>
+          <span class="char rot-r1">B</span>
+          <span class="char box rot-l2">O</span>
+          <span class="char rot-r1">U</span>
+          <span class="char rot-r2">T</span>
+        </button>
+
+      </nav>
+
+      <!-- ข้อความ COMMANDS (ไม่ใช่ปุ่มกด) -->
+      <div class="p5-commands" aria-hidden="true">
+        <span class="cmd-char cmd-c">C</span>
+        <span class="cmd-char cmd-box rot-l3">O</span>
+        <span class="cmd-char cmd-underlined rot-l1">M</span>
+        <span class="cmd-char cmd-underlined rot-r1">M</span>
+        <span class="cmd-char cmd-underlined rot-l1">A</span>
+        <span class="cmd-char cmd-underlined rot-r1">N</span>
+        <span class="cmd-char cmd-box rot-r2">D</span>
+        <span class="cmd-char cmd-invert rot-l1">S</span>
+      </div>
+    </main>
+
+    <!-- ==========================================
+         หน้า 2: หน้า INTRO
+         ========================================== -->
+    <section id="intro-screen" class="p5-stage p5-intro-stage" aria-label="Intro Section">
+      <button type="button" class="p5-back-btn" onclick="closeToMainMenu()" title="กลับหน้าหลัก (ESC)">
+        <span>◀ BACK</span>
+      </button>
+
+      <header class="intro-header" aria-hidden="true">
+        <span class="in-char in-i">I</span>
+        <span class="in-char in-n">N</span>
+        <span class="in-char in-t">T</span>
+        <span class="in-char in-r">R</span>
+        <span class="in-char in-o-box">O</span>
+      </header>
+
+      <div class="intro-message-box">
+        <div class="intro-strip">ยินดีต้อนรับสู่พื้นที่ปล้นใจ! รวมทุกรีวิว ความคิด</div>
+        <div class="intro-strip">เห็น และเรื่องราวที่คุณไม่ควรพลาด สัมผัสความ</div>
+        <div class="intro-strip">มันส์และมุมมองที่ไม่เหมือนใครได้ที่นี่</div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         หน้า 3: หน้ารีวิว (REVIEW SCREEN)
+         ========================================== -->
+    <section id="review-screen" class="p5-stage p5-review-stage" aria-label="Review Section">
+      <button type="button" class="p5-back-btn" onclick="closeToMainMenu()" title="กลับหน้าหลัก (ESC)">
+        <span>◀ BACK</span>
+      </button>
+
+      <header class="review-header" aria-hidden="true">
+        <span class="rv-char rv-r">R</span>
+        <span class="rv-char rv-e-split">E</span>
+        <span class="rv-char rv-v">V</span>
+        <span class="rv-char rv-i-box">I</span>
+        <span class="rv-char rv-e-split rv-e2">E</span>
+        <span class="rv-char rv-w">W</span>
+      </header>
+
+      <article id="review-post-card" class="review-post-container" onclick="nextReviewPost()" title="หมุนลูกกลิ้งเมาส์ หรือคลิกเพื่อดูรีวิวถัดไป">
+        <div class="review-img-frame">
+          <img id="review-img" src="post1.jpg" alt="Review Thumbnail">
+        </div>
+
+        <div class="review-text-group">
+          <h2 id="review-title" class="review-title">Review here</h2>
+          <p id="review-line-1" class="review-line">..................</p>
+          <p id="review-line-2" class="review-line">..................</p>
+          <p id="review-line-3" class="review-line">..................</p>
+        </div>
+      </article>
+
+      <div class="review-pagination" onclick="nextReviewPost()" title="คลิกเพื่อเปลี่ยนหน้า">
+        <span id="review-current" class="page-current">1</span>
+        <span class="page-slash">/</span>
+        <span id="review-total" class="page-total-box">4</span>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         หน้า 4: หน้า POSTS (POSTS SCREEN)
+         ========================================== -->
+    <section id="posts-screen" class="p5-stage p5-posts-stage" aria-label="Posts Section">
+      <button type="button" class="p5-back-btn" onclick="closeToMainMenu()" title="กลับหน้าหลัก (ESC)">
+        <span>◀ BACK</span>
+      </button>
+
+      <header class="posts-header" aria-hidden="true">
+        <span class="ps-char ps-p">P</span>
+        <span class="ps-char ps-o-box">O</span>
+        <span class="ps-char ps-s1">S</span>
+        <span class="ps-char ps-t">T</span>
+        <span class="ps-char ps-s2">S</span>
+      </header>
+
+      <article id="posts-card" class="posts-card-container" onclick="nextPostItem()" title="หมุนลูกกลิ้งเมาส์ หรือคลิกเพื่อดูโพสต์ถัดไป">
+        <div class="posts-img-frame">
+          <img id="posts-img" src="post1.jpg" alt="Post Thumbnail">
+        </div>
+
+        <div class="posts-text-group">
+          <h2 id="posts-title" class="posts-title">POST here</h2>
+          <p id="posts-line-1" class="posts-line">...............</p>
+          <p id="posts-line-2" class="posts-line">...............</p>
+          <p id="posts-line-3" class="posts-line">...............</p>
+        </div>
+      </article>
+
+      <div class="posts-pagination" onclick="nextPostItem()" title="คลิกเพื่อเปลี่ยนหน้า">
+        <span id="posts-current" class="posts-page-current">1</span>
+        <span class="posts-page-slash">/</span>
+        <span id="posts-total" class="posts-page-total-box">4</span>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         หน้า 5: หน้า CONFIDANTS (CONFIDANTS SCREEN)
+         ========================================== -->
+    <section id="confidant-screen" class="p5-stage p5-confidant-stage" aria-label="Confidants Section">
+      <button type="button" class="p5-back-btn" onclick="closeToMainMenu()" title="กลับหน้าหลัก (ESC)">
+        <span>◀ BACK</span>
+      </button>
+
+      <header class="confidant-header" aria-hidden="true">
+        <span class="cf-char cf-c">C</span>
+        <span class="cf-char cf-o-box">O</span>
+        <span class="cf-char cf-n1">N</span>
+        <span class="cf-char cf-f">F</span>
+        <span class="cf-char cf-i-box">I</span>
+        <span class="cf-char cf-d-box">D</span>
+        <span class="cf-char cf-a">A</span>
+        <span class="cf-char cf-n2">N</span>
+        <span class="cf-char cf-t">T</span>
+        <span class="cf-char cf-s">S</span>
+      </header>
+
+      <article id="confidant-card" class="confidant-content-wrap" onclick="nextConfidant()" title="หมุนลูกกลิ้งเมาส์ หรือคลิกเพื่อดูตัวละครถัดไป">
+        <div class="confidant-portrait-card">
+          <img id="confidant-img" src="confidant1.jpg" alt="Confidant Character">
+        </div>
+
+        <div class="confidant-info-panel">
+          <div class="confidant-arcana-tag" id="confidant-arcana">ARCANA : I - THE MAGICIAN</div>
+          <h2 class="confidant-name" id="confidant-name">MORGANA (มอร์กานา)</h2>
+          <div class="confidant-role" id="confidant-role">CODENAME : MONA • ผู้นำทางแห่งกลุ่มจอมโจร</div>
+          
+          <div class="confidant-desc-box">
+            <p class="confidant-desc-line" id="confidant-line-1">สิ่งมีชีวิตลึกลับในร่างแมวสีดำที่พูดภาษามนุษย์ได้</p>
+            <p class="confidant-desc-line" id="confidant-line-2">ผู้ร่วมก่อตั้งและผู้นำทางคนสำคัญของกลุ่ม Phantom Thieves</p>
+            <p class="confidant-desc-line" id="confidant-line-3">เชี่ยวชาญการสำรวจ Mementos และมีทักษะสายซัพพอร์ตที่ยอดเยี่ยม</p>
+          </div>
+        </div>
+      </article>
+
+      <div class="confidant-pagination" onclick="nextConfidant()" title="คลิกเพื่อเปลี่ยนตัวละคร">
+        <span id="confidant-current" class="page-current">1</span>
+        <span class="page-slash">/</span>
+        <span id="confidant-total" class="page-total-box">4</span>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         หน้า 6: หน้า ABOUT (ที่มาของงานนี้)
+         ========================================== -->
+    <section id="about-screen" class="p5-stage p5-about-stage" aria-label="About Section">
+      <button type="button" class="p5-back-btn about-back-btn" onclick="closeToMainMenu()" title="กลับหน้าหลัก (ESC)">
+        <span>◀ BACK</span>
+      </button>
+
+      <header class="about-header" aria-hidden="true">
+        <span class="ab-char ab-a">A</span>
+        <span class="ab-char ab-b">B</span>
+        <span class="ab-char ab-o-box">O</span>
+        <span class="ab-char ab-u">U</span>
+        <span class="ab-char ab-t">T</span>
+      </header>
+
+      <div class="about-content-box">
+        <div class="about-tag">ORIGIN OF THIS PROJECT • ที่มาของงานนี้</div>
+        <h2 class="about-subtitle">BEHIND THE PHANTOM ARCHIVE</h2>
+        
+        <div class="about-strips-group">
+          <p class="about-strip">เว็บไซต์นี้ได้รับแรงบันดาลใจจากงานดีไซน์ UI อันเป็นเอกลักษณ์ของเกม Persona 5</p>
+          <p class="about-strip">พัฒนาขึ้นด้วย HTML, CSS และ JavaScript เพื่อนำเสนอรีวิว บทความ และข้อมูลตัวละคร</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // ====================================================
+    // 1. ข้อมูลในหน้า REVIEW
+    // ====================================================
+    const reviewPosts = [
+      {
+        image: 'images/post1.jpg',
+        title: 'เกมดีระดับตำนาน',
+        lines: ['10/10 ไม่หัก!']
+      },
+      {
+        image: 'images/post2.jpg',
+        title: 'Story & Characters',
+        lines: ['เนื้อเรื่องดี และตัวละครน่ากูน']
+      },
+      {
+        image: 'images/post3.jpg',
+        title: 'Art & Soundtrack',
+        lines: ['งานภาพและเพลง มีสไตล์สุดๆ']
+      },
+      {
+        image: 'images/post4.jpg',
+        title: 'Gameplay System',
+        lines: ['ระบบต่อสู้ลื่นไหลและสนุกมาก']
+      }
+    ];
+
+    // ====================================================
+    // 2. ข้อมูลในหน้า POSTS
+    // ====================================================
+    const postsData = [
+      {
+        image: 'images/post1.jpg',
+        title: 'Announcement',
+        lines: ['ผมเล่น Persona 5 จบแล้ว', 'เกมดีมาก']
+      },
+      {
+        image: 'images/post5.jpg',
+        title: 'Phantom Thieves Note',
+        lines: ['อัปเดตข่าวสารล่าสุด', 'เบื้องหลังการพัฒนาโปรเจกต์', 'ติดตามเรื่องราวใหม่ๆ ได้ที่นี่']
+      },
+      {
+        image: 'images/post6.png',
+        title: 'Character Spotlight',
+        lines: ['เจาะลึกประวัติตัวละครหลัก', 'ความสามารถ', 'เคล็ดลับการจัดทีมลุย Palace']
+      },
+      {
+        image: 'images/post7.jpg',
+        title: 'Community Highlights',
+        lines: ['รวมผลงานแฟนอาร์ตสุดเท่', 'ทฤษฎีและเนื้อเรื่องเสริม', 'พูดคุยแลกเปลี่ยนความคิดเห็น']
+      }
+    ];
+
+    // ====================================================
+    // 3. ข้อมูลตัวละครทั้ง 4 ในหน้า CONFIDANTS
+    // ====================================================
+    const confidantsData = [
+      {
+        image: 'images/confidant1.jpg',
+        arcana: 'ARCANA : I - THE MAGICIAN',
+        name: 'MORGANA (มอร์กานา)',
+        role: 'CODENAME : MONA • ผู้นำทางแห่งกลุ่มจอมโจร',
+        lines: [
+          'สิ่งมีชีวิตลึกลับในร่างแมวสีดำที่พูดภาษามนุษย์ได้',
+          'ผู้ร่วมก่อตั้งและผู้นำทางคนสำคัญของกลุ่ม Phantom Thieves',
+          'เชี่ยวชาญการสำรวจ Mementos และมีทักษะสายซัพพอร์ตที่ยอดเยี่ยม'
+        ]
+      },
+      {
+        image: 'images/confidant2.jpg',
+        arcana: 'ARCANA : XIV - TEMPERANCE',
+        name: 'SADAYO KAWAKAMI (คาวาคามิ)',
+        role: 'HOMEROOM TEACHER • ครูประจำชั้นผู้ทุ่มเท',
+        lines: [
+          'ครูประจำชั้นมัธยมปลายที่ดูเหนื่อยล้าแต่ห่วงใยลูกศิษย์เสมอ',
+          'ทำงานพิเศษในชื่อ "Becky" เพื่อแบกรับภาระช่วยเหลืออดีตนักเรียน',
+          'พันธมิตรสำคัญที่ช่วยให้ตัวเอกบริหารเวลาทำกิจกรรมต่างๆ ได้มากขึ้น'
+        ]
+      },
+      {
+        image: 'images/confidant3.jpg',
+        arcana: 'ARCANA : VIII - JUSTICE',
+        name: 'GORO AKECHI (โกโระ อาเคจิ)',
+        role: 'CODENAME : CROW • เจ้าชายนักสืบม.ปลาย',
+        lines: [
+          'นักสืบม.ปลายชื่อดังผู้ได้รับฉายาว่า "การกลับมาของเจ้าชายนักสืบ"',
+          'มีไหวพริบเฉียบแหลม ช่างสังเกต และเป็นคู่ปรับที่สมน้ำสมเนื้อกับ Joker',
+          'ซ่อนปมในอดีตและเป้าหมายที่ซับซ้อนไว้เบื้องหลังรอยยิ้มที่สมบูรณ์แบบ'
+        ]
+      },
+      {
+        image: 'images/confidant4.jpg',
+        arcana: 'ARCANA : VI - THE LOVERS',
+        name: 'ANN TAKAMAKI (แอน ทาคามากิ)',
+        role: 'CODENAME : PANTHER • สมาชิกผู้ร่าเริงและรักเพื่อน',
+        lines: [
+          'สาวลูกครึ่งอเมริกัน-ญี่ปุ่น นางแบบวัยรุ่นผู้จริงใจและรักเพื่อนพ้อง',
+          'หนึ่งในสมาชิกยุคบุกเบิกของกลุ่มจอมโจรปล้นใจในโค้ดเนม "Panther"',
+          'โดดเด่นด้วยพลังเวทย์ธาตุไฟที่รุนแรงและหัวใจที่พร้อมสู้เพื่อความถูกต้อง'
+        ]
+      }
+    ];
+
+    let currentReviewIndex = 0;
+    let currentPostsIndex = 0;
+    let currentConfidantIndex = 0;
+    let isScrollingCooldown = false;
+
+    const stages = document.querySelectorAll('.p5-stage');
+    const mainMenu = document.getElementById('main-menu');
+    const introScreen = document.getElementById('intro-screen');
+    const reviewScreen = document.getElementById('review-screen');
+    const postsScreen = document.getElementById('posts-screen');
+    const confidantScreen = document.getElementById('confidant-screen');
+    const aboutScreen = document.getElementById('about-screen');
+
+    // Elements ของหน้า Review
+    const reviewCard = document.getElementById('review-post-card');
+    const reviewImg = document.getElementById('review-img');
+    const reviewTitle = document.getElementById('review-title');
+    const reviewLine1 = document.getElementById('review-line-1');
+    const reviewLine2 = document.getElementById('review-line-2');
+    const reviewLine3 = document.getElementById('review-line-3');
+    const reviewCurrent = document.getElementById('review-current');
+    const reviewTotal = document.getElementById('review-total');
+
+    // Elements ของหน้า Posts
+    const postsCard = document.getElementById('posts-card');
+    const postsImg = document.getElementById('posts-img');
+    const postsTitle = document.getElementById('posts-title');
+    const postsLine1 = document.getElementById('posts-line-1');
+    const postsLine2 = document.getElementById('posts-line-2');
+    const postsLine3 = document.getElementById('posts-line-3');
+    const postsCurrent = document.getElementById('posts-current');
+    const postsTotal = document.getElementById('posts-total');
+
+    // Elements ของหน้า Confidants
+    const confidantCard = document.getElementById('confidant-card');
+    const confidantImg = document.getElementById('confidant-img');
+    const confidantArcana = document.getElementById('confidant-arcana');
+    const confidantName = document.getElementById('confidant-name');
+    const confidantRole = document.getElementById('confidant-role');
+    const confidantLine1 = document.getElementById('confidant-line-1');
+    const confidantLine2 = document.getElementById('confidant-line-2');
+    const confidantLine3 = document.getElementById('confidant-line-3');
+    const confidantCurrent = document.getElementById('confidant-current');
+    const confidantTotal = document.getElementById('confidant-total');
+
+    if (reviewTotal) reviewTotal.textContent = reviewPosts.length;
+    if (postsTotal) postsTotal.textContent = postsData.length;
+    if (confidantTotal) confidantTotal.textContent = confidantsData.length;
+
+    // ฟังก์ชันเปิดหน้าต่างๆ ทั้ง 5 หน้า
+    function openIntroScreen() {
+      stages.forEach(stage => stage.classList.remove('active'));
+      if (introScreen) introScreen.classList.add('active');
+    }
+
+    function openReviewScreen() {
+      stages.forEach(stage => stage.classList.remove('active'));
+      if (reviewScreen) reviewScreen.classList.add('active');
+      renderReviewPost(0, 'next');
+    }
+
+    function openPostsScreen() {
+      stages.forEach(stage => stage.classList.remove('active'));
+      if (postsScreen) postsScreen.classList.add('active');
+      renderPostItem(0, 'next');
+    }
+
+    function openConfidantScreen() {
+      stages.forEach(stage => stage.classList.remove('active'));
+      if (confidantScreen) confidantScreen.classList.add('active');
+      renderConfidant(0, 'next');
+    }
+
+    function openAboutScreen() {
+      stages.forEach(stage => stage.classList.remove('active'));
+      if (aboutScreen) aboutScreen.classList.add('active');
+    }
+
+    function closeToMainMenu() {
+      stages.forEach(stage => stage.classList.remove('active'));
+      if (mainMenu) mainMenu.classList.add('active');
+    }
+
+    function handleMenuClick(menuName) {
+      if (menuName === 'INTRO') openIntroScreen();
+      else if (menuName === 'REVIEW') openReviewScreen();
+      else if (menuName === 'POSTS') openPostsScreen();
+      else if (menuName === 'CONFIDANT') openConfidantScreen();
+      else if (menuName === 'ABOUT') openAboutScreen();
+    }
+
+    // ฟังก์ชันเลื่อนโพสต์ของหน้า REVIEW
+    function renderReviewPost(index, direction = 'next') {
+      if (!reviewCard) return;
+      const animClass = direction === 'next' ? 'slide-next' : 'slide-prev';
+      reviewCard.classList.remove('slide-next', 'slide-prev');
+      void reviewCard.offsetWidth;
+      reviewCard.classList.add(animClass);
+
+      const post = reviewPosts[index];
+      reviewImg.src = post.image;
+      reviewTitle.textContent = post.title;
+      reviewLine1.textContent = post.lines[0] || '';
+      reviewLine2.textContent = post.lines[1] || '';
+      reviewLine3.textContent = post.lines[2] || '';
+      reviewCurrent.textContent = index + 1;
+    }
+
+    function nextReviewPost() {
+      currentReviewIndex = (currentReviewIndex + 1) % reviewPosts.length;
+      renderReviewPost(currentReviewIndex, 'next');
+    }
+
+    function prevReviewPost() {
+      currentReviewIndex = (currentReviewIndex - 1 + reviewPosts.length) % reviewPosts.length;
+      renderReviewPost(currentReviewIndex, 'prev');
+    }
+
+    // ฟังก์ชันเลื่อนโพสต์ของหน้า POSTS
+    function renderPostItem(index, direction = 'next') {
+      if (!postsCard) return;
+      const animClass = direction === 'next' ? 'slide-next' : 'slide-prev';
+      postsCard.classList.remove('slide-next', 'slide-prev');
+      void postsCard.offsetWidth;
+      postsCard.classList.add(animClass);
+
+      const item = postsData[index];
+      postsImg.src = item.image;
+      postsTitle.textContent = item.title;
+      postsLine1.textContent = item.lines[0] || '';
+      postsLine2.textContent = item.lines[1] || '';
+      postsLine3.textContent = item.lines[2] || '';
+      postsCurrent.textContent = index + 1;
+    }
+
+    function nextPostItem() {
+      currentPostsIndex = (currentPostsIndex + 1) % postsData.length;
+      renderPostItem(currentPostsIndex, 'next');
+    }
+
+    function prevPostItem() {
+      currentPostsIndex = (currentPostsIndex - 1 + postsData.length) % postsData.length;
+      renderPostItem(currentPostsIndex, 'prev');
+    }
+
+    // ฟังก์ชันเลื่อนดูตัวละครของหน้า CONFIDANTS
+    function renderConfidant(index, direction = 'next') {
+      if (!confidantCard) return;
+      const animClass = direction === 'next' ? 'slide-next' : 'slide-prev';
+      confidantCard.classList.remove('slide-next', 'slide-prev');
+      void confidantCard.offsetWidth;
+      confidantCard.classList.add(animClass);
+
+      const charData = confidantsData[index];
+      if (confidantImg) {
+        confidantImg.src = charData.image;
+      }
+
+      confidantArcana.textContent = charData.arcana;
+      confidantName.textContent = charData.name;
+      confidantRole.textContent = charData.role;
+      confidantLine1.textContent = charData.lines[0] || '';
+      confidantLine2.textContent = charData.lines[1] || '';
+      confidantLine3.textContent = charData.lines[2] || '';
+      confidantCurrent.textContent = index + 1;
+    }
+
+    function nextConfidant() {
+      currentConfidantIndex = (currentConfidantIndex + 1) % confidantsData.length;
+      renderConfidant(currentConfidantIndex, 'next');
+    }
+
+    function prevConfidant() {
+      currentConfidantIndex = (currentConfidantIndex - 1 + confidantsData.length) % confidantsData.length;
+      renderConfidant(currentConfidantIndex, 'prev');
+    }
+
+    // รองรับการหมุนลูกกลิ้งเมาส์ (Scroll)
+    window.addEventListener('wheel', (e) => {
+      if (isScrollingCooldown) return;
+
+      if (reviewScreen && reviewScreen.classList.contains('active')) {
+        isScrollingCooldown = true;
+        if (e.deltaY > 0) nextReviewPost();
+        else if (e.deltaY < 0) prevReviewPost();
+        setTimeout(() => { isScrollingCooldown = false; }, 380);
+      } else if (postsScreen && postsScreen.classList.contains('active')) {
+        isScrollingCooldown = true;
+        if (e.deltaY > 0) nextPostItem();
+        else if (e.deltaY < 0) prevPostItem();
+        setTimeout(() => { isScrollingCooldown = false; }, 380);
+      } else if (confidantScreen && confidantScreen.classList.contains('active')) {
+        isScrollingCooldown = true;
+        if (e.deltaY > 0) nextConfidant();
+        else if (e.deltaY < 0) prevConfidant();
+        setTimeout(() => { isScrollingCooldown = false; }, 380);
+      }
+    }, { passive: true });
+
+    // รองรับการกดปุ่มลูกศรบนคีย์บอร์ด และปุ่ม ESC
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mainMenu.classList.contains('active')) {
+        closeToMainMenu();
+        return;
+      }
+
+      if (reviewScreen && reviewScreen.classList.contains('active')) {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') nextReviewPost();
+        else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') prevReviewPost();
+      } else if (postsScreen && postsScreen.classList.contains('active')) {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') nextPostItem();
+        else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') prevPostItem();
+      } else if (confidantScreen && confidantScreen.classList.contains('active')) {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') nextConfidant();
+        else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') prevConfidant();
+      }
+    });
+  </script>
+
+</body>
+</html>
